@@ -11,7 +11,7 @@ author: Gbenga Adeyi <adeyigbenga005@gmail.com>
 
 def main() -> None:
     with open("data.txt","r") as f:
-        print(f.read())
+        print('\033[0;37;42m',f.read())
 
 
 if __name__ == "__main__":
