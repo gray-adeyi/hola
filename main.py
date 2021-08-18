@@ -7,12 +7,17 @@
 version 0.1.0
 author: Gbenga Adeyi <adeyigbenga005@gmail.com>
 """
+ENABLE_COLOR = True
+COLOR = "\033[0;37;42m"
 
-
-def main() -> None:
+def run() -> None:
     with open("data.txt","r") as f:
-        print('\033[0;37;42m',f.read())
+        if ENABLE_COLOR:
+            print_text = COLOR + f.read()
+        else:
+            print_text = f.read()
+        print(print_text)
 
 
 if __name__ == "__main__":
-    main()
+    run()
